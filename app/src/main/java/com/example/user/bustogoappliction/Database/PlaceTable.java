@@ -41,11 +41,12 @@ public class PlaceTable {
     public String[] readAllPlace(int intcolum) {
         try {
             String[] strResult = null;
-            Cursor objCursor = readSqLiteDatabase.query(PLACE_TABLE, new String[]{PLACE_ID, PLACE_NAME, PLACE_DETAIL, PLACE_LAT,PLACE_LONG,PLACE_PIC}, null, null, null, null, null);
-            if (objCursor != null) {
-                if (objCursor.moveToNext()) {
-                    strResult = new String[6];
-                    for (int i = 0; i < 6; i++) {
+            Cursor objCursor = readSqLiteDatabase.query(PLACE_TABLE, new String[]{PLACE_ID, PLACE_NAME, PLACE_DETAIL, PLACE_LAT, PLACE_LONG, PLACE_PIC}, null, null, null, null, null);
+            if(objCursor != null){
+                if(objCursor.moveToFirst()){
+                    int num = objCursor.getCount();
+                    strResult = new String[num];
+                    for(int i =0;i<num;i++){
                         strResult[i] = objCursor.getString(intcolum);
                         objCursor.moveToNext();
                     }

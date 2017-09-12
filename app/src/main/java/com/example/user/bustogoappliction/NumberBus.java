@@ -23,18 +23,7 @@ public class NumberBus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number_bus);
-        //inital view
-        /*listView = (ListView) findViewById(R.id.livBus);
-        //Get volue
-        titlesStrings = getResources().getStringArray(R.array.title);
-        detailStrings = getResources().getStringArray(R.array.detail);
-        //SubString detailString ตัดข้อความให้สั้นตามที่ต้องการ
-        shorStrings = new String[detailStrings.length]; //จำลองพื้นที่
-        for (int i = 0; i < detailStrings.length;i++){
-            shorStrings [i] = detailStrings [i] .substring(0,29)+"...";
 
-        } //end for*/
-        //create ListView
         BindWidget();
         c();
         Clistview();
