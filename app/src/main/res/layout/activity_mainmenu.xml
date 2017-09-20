@@ -19,7 +19,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/busonenikekek"
-        app:layout_constraintBottom_toTopOf="@+id/imvb" />
+        app:layout_constraintBottom_toTopOf="@+id/imvb"
+        app:layout_constraintVertical_bias="0.5" />
 
     <ImageView
         android:id="@+id/imvb"
